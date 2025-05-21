@@ -1,8 +1,12 @@
 
-import { Briefcase, FileSearch } from "lucide-react";
+import { Briefcase, Database, Brain } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const Services = () => {
+  const [activeCategory, setActiveCategory] = useState<"data" | "ai">("data");
+
   const dataServices = [
     {
       title: "Data Analysis",
@@ -52,54 +56,74 @@ const Services = () => {
           We specialize in transforming complex data challenges into clear, actionable solutions
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-          {/* Data Management */}
-          <div className="space-y-8">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-keja-light flex items-center justify-center">
-                <FileSearch className="h-6 w-6 text-keja-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-keja-primary">Data Management & Analytics</h3>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {dataServices.map((service, index) => (
-                <Card key={index} className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-keja-secondary mb-2">{service.title}</h4>
-                    <p className="text-sm text-keja-gray">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+        {/* Toggle Switch */}
+        <div className="flex justify-center mb-12">
+          <ToggleGroup 
+            type="single" 
+            value={activeCategory} 
+            onValueChange={(value) => value && setActiveCategory(value as "data" | "ai")}
+            className="border rounded-full p-1 bg-keja-dark/30 backdrop-blur-sm"
+          >
+            <ToggleGroupItem 
+              value="data" 
+              aria-label="Toggle data services" 
+              className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
+                activeCategory === "data" 
+                  ? "bg-keja-secondary text-white shadow-md" 
+                  : "text-gray-400 hover:text-white"
+              }`}
+            >
+              <Database className="h-4 w-4 mr-2" />
+              Data Management
+            </ToggleGroupItem>
+            <ToggleGroupItem 
+              value="ai" 
+              aria-label="Toggle AI services" 
+              className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
+                activeCategory === "ai" 
+                  ? "bg-keja-secondary text-white shadow-md" 
+                  : "text-gray-400 hover:text-white"
+              }`}
+            >
+              <Brain className="h-4 w-4 mr-2" />
+              AI & Machine Learning
+            </ToggleGroupItem>
+          </ToggleGroup>
+        </div>
 
-          {/* AI Development */}
-          <div className="space-y-8">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-keja-light flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-keja-primary">
-                  <path d="M12 2H2v10h10V2Z" />
-                  <path d="M12 12H2v10h10V12Z" />
-                  <path d="M22 2h-5v5h5V2Z" />
-                  <path d="M22 12h-5v10h5V12Z" />
-                  <path d="M17 7h-5v5h5V7Z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-keja-primary">AI & Machine Learning Innovation</h3>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {aiServices.map((service, index) => (
-                <Card key={index} className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+        {/* Conditional Content Based on Toggle */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 max-w-5xl mx-auto">
+          {activeCategory === "data" ? (
+            // Data Services Content
+            <>
+              {dataServices.map((service, index) => (
+                <Card 
+                  key={index} 
+                  className="border border-keja-light/10 bg-white/5 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all hover:scale-105 hover:bg-white/10"
+                >
                   <CardContent className="p-6">
-                    <h4 className="font-semibold text-keja-secondary mb-2">{service.title}</h4>
-                    <p className="text-sm text-keja-gray">{service.description}</p>
+                    <h4 className="font-semibold text-keja-secondary text-lg mb-2">{service.title}</h4>
+                    <p className="text-gray-300">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
+            </>
+          ) : (
+            // AI Services Content
+            <>
+              {aiServices.map((service, index) => (
+                <Card 
+                  key={index} 
+                  className="border border-keja-light/10 bg-white/5 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all hover:scale-105 hover:bg-white/10"
+                >
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-keja-secondary text-lg mb-2">{service.title}</h4>
+                    <p className="text-gray-300">{service.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </>
+          )}
         </div>
       </div>
     </section>
