@@ -64,12 +64,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				keja: {
-					primary: '#1e293b', // Slate 800 - elegant dark
-					secondary: '#64748b', // Slate 500 - sophisticated gray
-					accent: '#3b82f6', // Blue 500 - clean accent
-					light: '#f1f5f9', // Slate 100 - subtle light
-					dark: '#0f172a', // Slate 900 - deep dark
-					gray: '#6b7280', // Gray 500 - neutral text
+					primary: '#2c3e50', // Deep navy from logo background
+					secondary: '#34495e', // Slightly lighter navy
+					accent: '#d4a574', // Warm copper/bronze from logo
+					light: '#f7f3f0', // Cream/beige tone
+					dark: '#1a252f', // Darker navy
+					gray: '#7f8c8d', // Sophisticated gray
+					copper: '#c8956d', // Rich copper tone
+					cream: '#f5f2ed', // Soft cream
 				}
 			},
 			borderRadius: {
