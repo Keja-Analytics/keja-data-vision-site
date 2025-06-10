@@ -85,7 +85,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: linear-gradient(135deg, #f7f3f0 0%, #f5f2ed 30%, #e8ddd4 70%, #d4c7b8 100%);
+    background: linear-gradient(135deg, #1a2332 0%, #243347 30%, #2c3e50 70%, #34495e 100%);
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
@@ -102,11 +102,11 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-keja-primary mb-6 text-center;
+    @apply text-3xl md:text-4xl font-bold text-keja-cream mb-6 text-center;
   }
   
   .section-subtitle {
-    @apply text-xl md:text-2xl font-medium text-keja-secondary mb-12 text-center max-w-3xl mx-auto;
+    @apply text-xl md:text-2xl font-medium text-keja-light mb-12 text-center max-w-3xl mx-auto;
   }
 
   .gradient-bg {
@@ -124,30 +124,30 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(212, 165, 116, 0.08) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 140, 66, 0.08) 1px, transparent 0);
     background-size: 40px 40px;
     opacity: 0.4;
     z-index: -1;
   }
 
   .glass {
-    @apply bg-white/40 backdrop-blur-2xl border border-white/20 shadow-2xl;
+    @apply bg-white/10 backdrop-blur-2xl border border-white/20 shadow-2xl;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
   }
 
   .glass-card {
-    @apply bg-white/30 backdrop-blur-xl border border-white/20 shadow-lg;
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .glass-card:hover {
-    @apply bg-white/40 shadow-2xl;
+    @apply bg-white/15 shadow-2xl;
     transform: translateY(-8px) scale(1.02);
-    border-color: rgba(212, 165, 116, 0.3);
-    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%);
+    border-color: rgba(255, 140, 66, 0.3);
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
   }
 
   .glass-dark {
@@ -174,8 +174,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 165, 116, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(212, 165, 116, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 140, 66, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 140, 66, 0.6); }
 }
 
 .animate-float {
@@ -210,4 +210,27 @@
 .btn-hover:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Intersection Observer animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scale-up {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-up.animate {
+  opacity: 1;
+  transform: scale(1);
 }

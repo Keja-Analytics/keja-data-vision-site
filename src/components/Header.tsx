@@ -36,9 +36,9 @@ const Header = () => {
         <div className="flex justify-between items-center py-4 md:py-6">
           <div className="flex items-center gap-3">
             <img 
-              src="/placeholder.svg" 
+              src="/lovable-uploads/022ecc1c-cfa3-45b9-b3a4-b706926eb727.png" 
               alt="Keja Analytics Logo" 
-              className="h-10 w-10 rounded-lg"
+              className="h-10 w-10"
             />
             <span className="text-xl font-semibold text-keja-primary">
               Keja Analytics

@@ -64,14 +64,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				keja: {
-					primary: '#2c3e50', // Deep navy from logo background
-					secondary: '#34495e', // Slightly lighter navy
-					accent: '#d4a574', // Warm copper/bronze from logo
-					light: '#f7f3f0', // Cream/beige tone
-					dark: '#1a252f', // Darker navy
-					gray: '#7f8c8d', // Sophisticated gray
-					copper: '#c8956d', // Rich copper tone
-					cream: '#f5f2ed', // Soft cream
+					primary: '#1a2332', // Dark navy from logo background
+					secondary: '#243347', // Slightly lighter navy
+					accent: '#ff8c42', // Orange/copper from logo icon
+					light: '#f8f9fa', // Light cream
+					dark: '#0f1419', // Darkest navy
+					gray: '#6c757d', // Sophisticated gray
+					copper: '#e67e22', // Rich copper tone
+					cream: '#ffffff', // Pure white for contrast
 				}
 			},
 			borderRadius: {
@@ -103,13 +103,23 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { opacity: '0', transform: 'scale(0.95)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out forwards',
-				'float': 'float 6s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'slide-up': 'slide-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+				'scale-in': 'scale-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
