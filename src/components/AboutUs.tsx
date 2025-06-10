@@ -1,89 +1,56 @@
 
-import { FileText, Info } from "lucide-react";
+import { Target, TrendingUp, Shield } from "lucide-react";
 
 const AboutUs = () => {
+  const solutions = [
+    {
+      icon: Target,
+      title: "No-Code AI Implementation",
+      description: "Build functional AI solutions without technical complexity. We help you harness generative AI to produce more value with less cost, making you appear innovative and tech-savvy while avoiding the frustrations of failed implementations."
+    },
+    {
+      icon: TrendingUp,
+      title: "Demand Forecasting Solutions",
+      description: "Prevent lost sales and overstocking with accurate demand forecasts. Our algorithms help manufacturers and retailers optimize inventory, protect revenue, and maintain their reputation for reliable stock availability."
+    },
+    {
+      icon: Shield,
+      title: "Secure Analytics Dashboards",
+      description: "Access clear, secure, and easy-to-use reports without compromising sensitive business data. Our solutions let you control and analyze data locally while appearing competent and self-sufficient to stakeholders."
+    }
+  ];
+
   return (
-    <section id="about" className="bg-gray-50 py-16 md:py-24">
+    <section id="about" className="py-16 md:py-24">
       <div className="section-container">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <Info className="h-5 w-5 text-keja-secondary" />
-          <h2 className="section-title">Who We Are</h2>
+        <div className="text-center mb-16">
+          <h2 className="section-title">Solving Real Business Challenges</h2>
+          <p className="section-subtitle">
+            We understand the specific pain points that prevent businesses from leveraging AI and data analytics effectively
+          </p>
         </div>
-        <p className="section-subtitle">
-          Keja Analytics is dedicated to transforming data into actionable insights and building cutting-edge AI solutions
-        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-          <div className="bg-white rounded-xl shadow-md p-8 transform transition-all hover:shadow-lg hover:-translate-y-1">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-keja-light rounded-full flex items-center justify-center mr-4">
-                <FileText className="h-6 w-6 text-keja-primary" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {solutions.map((solution, index) => (
+            <div 
+              key={index} 
+              className="glass-card p-8 text-center hover:shadow-xl transition-all"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-keja-accent/10 mb-6">
+                <solution.icon className="h-8 w-8 text-keja-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-keja-primary">Our Vision</h3>
+              <h3 className="text-xl font-semibold text-keja-primary mb-4">{solution.title}</h3>
+              <p className="text-keja-gray leading-relaxed">{solution.description}</p>
             </div>
-            <p className="text-keja-gray">
-              To be the leading innovator in data analytics and AI solutions, empowering businesses to make informed decisions that drive growth and create lasting value.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-md p-8 transform transition-all hover:shadow-lg hover:-translate-y-1">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-keja-light rounded-full flex items-center justify-center mr-4">
-                <FileText className="h-6 w-6 text-keja-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-keja-primary">Our Mission</h3>
-            </div>
-            <p className="text-keja-gray">
-              To provide exceptional data analytics and AI solutions that turn complex information into clear insights, enabling our clients to optimize operations, enhance decision-making, and achieve sustainable growth.
-            </p>
-          </div>
+          ))}
         </div>
 
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-keja-primary mb-6 text-center">Our Core Focus</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-white to-keja-light rounded-lg p-6 border border-gray-200">
-              <h4 className="text-lg font-semibold text-keja-secondary mb-3">Analytical Projects</h4>
-              <ul className="space-y-2 text-keja-gray">
-                <li className="flex items-start">
-                  <span className="text-keja-accent mr-2">•</span>
-                  <span>Online marketing data analysis</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-keja-accent mr-2">•</span>
-                  <span>Data engineering projects</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-keja-accent mr-2">•</span>
-                  <span>Analytical reporting and dashboards</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-white to-keja-light rounded-lg p-6 border border-gray-200">
-              <h4 className="text-lg font-semibold text-keja-secondary mb-3">AI Research & Development</h4>
-              <ul className="space-y-2 text-keja-gray">
-                <li className="flex items-start">
-                  <span className="text-keja-accent mr-2">•</span>
-                  <span>Specialized AI R&D projects</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-keja-accent mr-2">•</span>
-                  <span>Machine learning model development</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-keja-accent mr-2">•</span>
-                  <span>AI agent and automation solutions</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-keja-gray max-w-3xl mx-auto">
-            At Keja Analytics, we are committed to delivering data-driven solutions, engineering robust data pipelines, and pioneering AI innovation to empower our clients in navigating the complexities of today's business landscape.
+        <div className="glass p-8 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-keja-primary mb-6">
+            Why Choose Keja Analytics?
+          </h3>
+          <p className="text-lg text-keja-gray max-w-4xl mx-auto leading-relaxed">
+            We bridge the gap between complex AI technology and practical business solutions. Our approach focuses on reducing technical barriers, protecting your bottom line, and ensuring you maintain control over your sensitive data while achieving measurable ROI.
           </p>
         </div>
       </div>
