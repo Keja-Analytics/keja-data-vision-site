@@ -64,12 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				keja: {
-					primary: '#2D3673', // Deep blue
-					secondary: '#5D5FEF', // Vibrant purple
-					accent: '#0EA5E9', // Bright blue accent
-					light: '#E5DEFF', // Soft purple
-					dark: '#1A1F2C', // Dark purple
-					gray: '#8E9196', // Neutral gray
+					primary: '#1e293b', // Slate 800 - elegant dark
+					secondary: '#64748b', // Slate 500 - sophisticated gray
+					accent: '#3b82f6', // Blue 500 - clean accent
+					light: '#f1f5f9', // Slate 100 - subtle light
+					dark: '#0f172a', // Slate 900 - deep dark
+					gray: '#6b7280', // Gray 500 - neutral text
 				}
 			},
 			borderRadius: {
@@ -97,15 +97,23 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out forwards'
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'float': 'float 6s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
+			},
+			backdropBlur: {
+				xs: '2px',
 			}
 		}
 	},

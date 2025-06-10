@@ -49,7 +49,7 @@ const Services = () => {
     <section id="services" className="py-16 md:py-24">
       <div className="section-container">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <Briefcase className="h-5 w-5 text-keja-secondary" />
+          <Briefcase className="h-5 w-5 text-keja-accent" />
           <h2 className="section-title">Our Services</h2>
         </div>
         <p className="section-subtitle">
@@ -62,15 +62,15 @@ const Services = () => {
             type="single" 
             value={activeCategory} 
             onValueChange={(value) => value && setActiveCategory(value as "data" | "ai")}
-            className="border rounded-full p-1 bg-keja-dark/30 backdrop-blur-sm"
+            className="glass border-white/20 rounded-full p-1"
           >
             <ToggleGroupItem 
               value="data" 
               aria-label="Toggle data services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "data" 
-                  ? "bg-keja-secondary text-white shadow-md" 
-                  : "text-gray-400 hover:text-white"
+                  ? "bg-keja-accent/20 text-keja-primary shadow-md backdrop-blur-sm" 
+                  : "text-keja-gray hover:text-keja-primary hover:bg-white/10"
               }`}
             >
               <Database className="h-4 w-4 mr-2" />
@@ -81,8 +81,8 @@ const Services = () => {
               aria-label="Toggle AI services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "ai" 
-                  ? "bg-keja-secondary text-white shadow-md" 
-                  : "text-gray-400 hover:text-white"
+                  ? "bg-keja-accent/20 text-keja-primary shadow-md backdrop-blur-sm" 
+                  : "text-keja-gray hover:text-keja-primary hover:bg-white/10"
               }`}
             >
               <Brain className="h-4 w-4 mr-2" />
@@ -91,34 +91,32 @@ const Services = () => {
           </ToggleGroup>
         </div>
 
-        {/* Conditional Content Based on Toggle */}
+        {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 max-w-5xl mx-auto">
           {activeCategory === "data" ? (
-            // Data Services Content
             <>
               {dataServices.map((service, index) => (
                 <Card 
                   key={index} 
-                  className="border border-keja-light/10 bg-white/5 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all hover:scale-105 hover:bg-white/10"
+                  className="glass-card border-white/20 hover:shadow-2xl transition-all hover:scale-105"
                 >
                   <CardContent className="p-6">
-                    <h4 className="font-semibold text-keja-secondary text-lg mb-2">{service.title}</h4>
-                    <p className="text-gray-300">{service.description}</p>
+                    <h4 className="font-semibold text-keja-primary text-lg mb-2">{service.title}</h4>
+                    <p className="text-keja-gray font-light">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </>
           ) : (
-            // AI Services Content
             <>
               {aiServices.map((service, index) => (
                 <Card 
                   key={index} 
-                  className="border border-keja-light/10 bg-white/5 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all hover:scale-105 hover:bg-white/10"
+                  className="glass-card border-white/20 hover:shadow-2xl transition-all hover:scale-105"
                 >
                   <CardContent className="p-6">
-                    <h4 className="font-semibold text-keja-secondary text-lg mb-2">{service.title}</h4>
-                    <p className="text-gray-300">{service.description}</p>
+                    <h4 className="font-semibold text-keja-primary text-lg mb-2">{service.title}</h4>
+                    <p className="text-keja-gray font-light">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
