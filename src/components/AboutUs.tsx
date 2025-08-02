@@ -69,7 +69,7 @@ const AboutUs = () => {
                 <solution.icon className="h-8 w-8 text-keja-accent" />
               </div>
               <h3 className="text-xl font-semibold text-keja-primary mb-4">{solution.title}</h3>
-              <p className="text-keja-gray leading-relaxed">{solution.description}</p>
+              <p className="text-white leading-relaxed">{solution.description}</p>
             </div>
           ))}
         </div>
