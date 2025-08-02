@@ -1,4 +1,3 @@
-
 import { Users, Linkedin } from "lucide-react";
 
 const Team = () => {
@@ -20,8 +19,10 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="bg-gray-50 py-16 md:py-24">
-      <div className="section-container">
+    <section id="team" className="py-20 md:py-32 bg-gradient-to-br from-keja-primary/5 to-keja-accent/5 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-keja-light/20 via-transparent to-keja-cream/20"></div>
+      
+      <div className="section-container relative">
         <div className="flex items-center justify-center gap-2 mb-2">
           <Users className="h-5 w-5 text-keja-secondary" />
           <h2 className="section-title">Meet the Founders</h2>
