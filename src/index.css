@@ -234,16 +234,3 @@
   opacity: 1;
   transform: scale(1);
 }
-/* Infinite horizontal scroll animation for client logos */
-@keyframes slide-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-slide-infinite {
-  animation: slide-infinite 20s linear infinite;
-}
