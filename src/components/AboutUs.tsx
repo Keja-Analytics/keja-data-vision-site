@@ -78,7 +78,7 @@ const AboutUs = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-keja-primary mb-6">
             Why Choose Keja Analytics?
           </h3>
-          <p className="text-lg text-keja-gray max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
             We bridge the gap between complex AI technology and practical business solutions. Our approach focuses on reducing technical barriers, protecting your bottom line, and ensuring you maintain control over your sensitive data while achieving measurable ROI.
           </p>
         </div>
