@@ -41,11 +41,11 @@ const Hero = () => {
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             <Button
-              variant="outline"
-              className="glass-card border-keja-accent/30 text-keja-cream hover:bg-keja-accent/20 hover:text-keja-cream px-8 py-6 text-lg font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-1 backdrop-blur-sm hover:border-keja-accent/50"
+              className="group glass-card hover:glass bg-gradient-to-r from-keja-accent/20 to-keja-copper/20 hover:from-keja-accent/40 hover:to-keja-copper/40 text-keja-cream border-keja-accent/30 hover:border-keja-accent/50 px-8 py-6 text-lg flex items-center gap-3 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 font-medium shadow-xl hover:shadow-2xl"
               onClick={() => window.location.href = '#services'}
             >
               Explore Our Solutions
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
         </div>
