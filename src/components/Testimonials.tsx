@@ -1,28 +1,20 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare } from "lucide-react";
-
 const Testimonials = () => {
-  const testimonials = [
-    {
-      quote: "Keja Analytics transformed our approach to data, enabling us to make more informed decisions that have directly improved our bottom line.",
-      name: "Trime Animal Feeds",
-      title: "Position, Company"
-    },
-    {
-      quote: "Working with the Keja Analytics team has been a game-changer for our business. Their AI solutions are innovative and deliver real results.",
-      name: "Robare Safaris", 
-      title: "Position, Company"
-    },
-    {
-      quote: "The depth of insights provided by Keja Analytics has helped us understand our market in ways we never thought possible.",
-      name: "Acre Insights",
-      title: "Position, Company"
-    }
-  ];
-
-  return (
-    <section className="bg-gradient-to-b from-keja-light/20 to-transparent py-20 md:py-32">
+  const testimonials = [{
+    quote: "Keja Analytics transformed our approach to data, enabling us to make more informed decisions that have directly improved our bottom line.",
+    name: "Trime Animal Feeds",
+    title: "Position, Company"
+  }, {
+    quote: "Working with the Keja Analytics team has been a game-changer for our business. Their AI solutions are innovative and deliver real results.",
+    name: "Robare Safaris",
+    title: "Position, Company"
+  }, {
+    quote: "The depth of insights provided by Keja Analytics has helped us understand our market in ways we never thought possible.",
+    name: "Acre Insights",
+    title: "Position, Company"
+  }];
+  return <section className="bg-gradient-to-b from-keja-light/20 to-transparent py-20 md:py-32">
       <div className="section-container">
         <div className="flex items-center justify-center gap-2 mb-2">
           <MessageSquare className="h-5 w-5 text-keja-secondary" />
@@ -33,11 +25,7 @@ const Testimonials = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="glass-card border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
-            >
+          {testimonials.map((testimonial, index) => <Card key={index} className="glass-card border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
               <div className="h-2 bg-gradient-to-r from-keja-accent to-keja-copper"></div>
               <CardContent className="pt-8 pb-6 px-6">
                 <div className="mb-4">
@@ -48,15 +36,12 @@ const Testimonials = () => {
                 <p className="text-keja-gray mb-6 italic leading-relaxed">{testimonial.quote}</p>
                 <div>
                   <p className="font-semibold text-keja-primary">{testimonial.name}</p>
-                  <p className="text-sm text-keja-gray">{testimonial.title}</p>
+                  
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Testimonials;
