@@ -11,7 +11,7 @@ const Testimonials = () => {
     },
     {
       quote: "Working with the Keja Analytics team has been a game-changer for our business. Their AI solutions are innovative and deliver real results.",
-      name: "Client Name", 
+      name: "Robare Safaris", 
       title: "Position, Company"
     },
     {
