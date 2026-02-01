@@ -16,7 +16,7 @@ const Testimonials = () => {
     },
     {
       quote: "The depth of insights provided by Keja Analytics has helped us understand our market in ways we never thought possible.",
-      name: "Client Name",
+      name: "Acre Insights",
       title: "Position, Company"
     }
   ];
