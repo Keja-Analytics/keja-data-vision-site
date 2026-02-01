@@ -6,7 +6,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "Keja Analytics transformed our approach to data, enabling us to make more informed decisions that have directly improved our bottom line.",
-      name: "Client Name",
+      name: "Trime Animal Feeds",
       title: "Position, Company"
     },
     {
