@@ -5,12 +5,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-keja-dark text-white pt-12 pb-6">
+    <footer className="border-t border-white/10 backdrop-blur-xl pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold">Keja Analytics</h2>
-            <p className="mt-2 text-gray-300 max-w-md">
+            <h2 className="text-2xl font-bold text-white">Keja Analytics</h2>
+            <p className="mt-2 text-white/40 max-w-md">
               Empowering businesses through intelligent data and AI solutions
             </p>
           </div>
@@ -20,7 +20,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/keja-analytics" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-keja-accent transition-colors"
+              className="text-white/40 hover:text-keja-accent transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
@@ -28,13 +28,13 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-white/30 text-sm">
             &copy; {currentYear} Keja Analytics. All rights reserved.
           </p>
           
           <div className="mt-4 md:mt-0">
-            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-300">
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/30">
               <a href="#about" className="hover:text-keja-accent transition-colors">
                 About
               </a>

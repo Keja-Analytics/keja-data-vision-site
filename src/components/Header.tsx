@@ -28,7 +28,7 @@ const Header = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-500",
         isScrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-lg border-b border-white/20"
+          ? "backdrop-blur-2xl bg-keja-primary/60 shadow-lg border-b border-white/10"
           : "bg-transparent"
       )}
     >
@@ -40,7 +40,7 @@ const Header = () => {
               alt="Keja Analytics Logo" 
               className="h-10 w-10"
             />
-            <span className="text-xl font-semibold text-keja-primary">
+            <span className="text-xl font-semibold text-white">
               Keja Analytics
             </span>
           </div>
@@ -51,13 +51,13 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-keja-dark hover:text-keja-accent font-medium transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-keja-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="text-white/70 hover:text-white font-medium transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-keja-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {link.name}
               </a>
             ))}
             <Button
-              className="bg-keja-accent/90 hover:bg-keja-accent text-white transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+              className="bg-keja-accent/20 hover:bg-keja-accent/30 text-white border border-keja-accent/30 hover:border-keja-accent/50 backdrop-blur-xl transition-all duration-300 hover:scale-105"
               onClick={() => window.location.href = '#contact'}
             >
               Get Started
@@ -69,7 +69,7 @@ const Header = () => {
             <Button
               variant="ghost"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-keja-primary p-2"
+              className="text-white p-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,20 +100,20 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-white/20 animate-fade-in backdrop-blur-sm">
+          <nav className="md:hidden py-4 border-t border-white/10 animate-fade-in backdrop-blur-xl">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-keja-dark hover:text-keja-accent font-medium px-2 py-1 transition-colors duration-300"
+                  className="text-white/70 hover:text-white font-medium px-2 py-1 transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
               <Button
-                className="bg-keja-accent hover:bg-keja-accent/90 text-white transition-all duration-300 w-full"
+                className="bg-keja-accent/20 hover:bg-keja-accent/30 text-white border border-keja-accent/30 transition-all duration-300 w-full"
                 onClick={() => {
                   window.location.href = '#contact';
                   setIsMobileMenuOpen(false);

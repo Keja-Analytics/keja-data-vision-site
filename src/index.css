@@ -85,7 +85,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: linear-gradient(135deg, #1a2332 0%, #243347 30%, #2c3e50 70%, #34495e 100%);
+    background: linear-gradient(160deg, #0c192b 0%, #0e1e33 40%, #112541 70%, #0c192b 100%);
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
@@ -124,35 +124,46 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(255, 140, 66, 0.08) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(191, 216, 238, 0.05) 1px, transparent 0);
     background-size: 40px 40px;
     opacity: 0.4;
     z-index: -1;
   }
 
   .glass {
-    @apply bg-white/10 backdrop-blur-2xl border border-white/20 shadow-2xl;
-    border-radius: 20px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    @apply backdrop-blur-2xl border border-white/15 shadow-2xl;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(191,216,238,0.04) 50%, rgba(255,255,255,0.02) 100%);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.02);
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    @apply backdrop-blur-xl border border-white/10 shadow-lg;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(191,216,238,0.03) 50%, rgba(255,255,255,0.01) 100%);
+    box-shadow: 
+      0 4px 24px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .glass-card:hover {
-    @apply bg-white/15 shadow-2xl;
-    transform: translateY(-8px) scale(1.02);
-    border-color: rgba(255, 140, 66, 0.3);
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+    @apply shadow-2xl;
+    transform: translateY(-6px) scale(1.01);
+    border-color: rgba(191, 216, 238, 0.25);
+    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(191,216,238,0.06) 50%, rgba(255,255,255,0.03) 100%);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 0 60px rgba(191, 216, 238, 0.08);
   }
 
   .glass-dark {
-    @apply bg-keja-dark/20 backdrop-blur-xl border border-keja-accent/10 shadow-2xl;
-    border-radius: 16px;
+    @apply bg-keja-dark/30 backdrop-blur-xl border border-keja-accent/10 shadow-2xl;
+    border-radius: 20px;
   }
 }
 
@@ -174,8 +185,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 140, 66, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(255, 140, 66, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(191, 216, 238, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(191, 216, 238, 0.4); }
 }
 
 .animate-float {
