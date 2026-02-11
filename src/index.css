@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,8 +17,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 40% 98.0392%;
+    --primary-foreground: 222 47.3684% 11.1765%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -100,11 +101,11 @@
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold text-keja-cream mb-6 text-center;
   }
-  
+
   .section-subtitle {
     @apply text-xl md:text-2xl font-medium text-keja-light mb-12 text-center max-w-3xl mx-auto;
   }
@@ -112,11 +113,11 @@
   .gradient-bg {
     @apply bg-gradient-to-br from-keja-primary via-keja-secondary to-keja-accent;
   }
-  
+
   .tech-pattern {
     position: relative;
   }
-  
+
   .tech-pattern::before {
     content: '';
     position: absolute;
