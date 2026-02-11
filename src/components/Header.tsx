@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -19,7 +18,7 @@ const Header = () => {
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    
+    { name: "Team", href: "#team" },
     { name: "Clients", href: "#clients" },
     { name: "Contact", href: "#contact" },
   ];
@@ -58,11 +57,10 @@ const Header = () => {
               </a>
             ))}
             <Button
-              className="group glass-btn bg-white/15 hover:bg-white/25 text-keja-primary font-semibold backdrop-blur-xl border border-keja-primary/10 transition-all duration-500 hover:scale-105 shadow-md"
+              className="bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold border-0 backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-md"
               onClick={() => window.location.href = '#contact'}
             >
               Get Started
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </nav>
 
@@ -115,7 +113,7 @@ const Header = () => {
                 </a>
               ))}
               <Button
-                className="group glass-btn bg-white/15 hover:bg-white/25 text-keja-primary font-semibold backdrop-blur-xl border border-keja-primary/10 transition-all duration-300 w-full"
+                className="bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold border-0 transition-all duration-300 w-full"
                 onClick={() => {
                   window.location.href = '#contact';
                   setIsMobileMenuOpen(false);

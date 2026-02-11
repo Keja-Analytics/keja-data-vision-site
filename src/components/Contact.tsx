@@ -96,7 +96,7 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                className="w-full group glass-btn bg-white/15 hover:bg-white/25 text-keja-primary font-semibold backdrop-blur-xl border border-keja-primary/10 transition-all duration-500 hover:scale-[1.02] shadow-md"
+                className="w-full bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold border-0 transition-all duration-300 hover:scale-[1.02] shadow-md"
               >
                 Send Message
               </Button>
@@ -144,7 +144,7 @@ const Contact = () => {
                 Let's work together to unlock the full potential of your data and help your business thrive with AI-powered solutions.
               </p>
               <Button 
-                className="group glass-btn bg-white/15 hover:bg-white/25 text-keja-primary font-semibold backdrop-blur-xl border border-keja-primary/10 transition-all duration-500 hover:scale-105 shadow-md"
+                className="bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold border-0 transition-all duration-300 hover:scale-105 shadow-md"
                 onClick={() => {
                   const formElement = document.querySelector('form');
                   if (formElement) {

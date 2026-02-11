@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import AboutUs from '@/components/AboutUs';
 import Services from '@/components/Services';
+import Team from '@/components/Team';
 import Clients from '@/components/Clients';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
@@ -12,6 +13,7 @@ import ScrollReveal from '@/utils/ScrollReveal';
 
 const Index = () => {
   useEffect(() => {
+    // Update document title
     document.title = "Keja Analytics | Data & AI Solutions";
   }, []);
 
@@ -28,6 +30,10 @@ const Index = () => {
         
         <ScrollReveal>
           <Services />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <Team />
         </ScrollReveal>
         
         <ScrollReveal>
