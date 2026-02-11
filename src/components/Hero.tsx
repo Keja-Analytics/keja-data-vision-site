@@ -14,44 +14,44 @@ const Hero = () => {
     <section className="pt-32 md:pt-40 pb-20 md:pb-32 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-keja-accent/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-keja-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-keja-accent/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-keja-copper/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8">
           <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-keja-primary leading-tight max-w-6xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-6xl mx-auto text-center lg:text-4xl text-primary-foreground">
               Transform Your Business with{" "}
-              <span className="font-medium text-keja-accent">AI Solutions</span>
+              <span className="font-medium text-primary-foreground">AI Solutions</span>
               {" "}&{" "}
-              <span className="font-medium text-keja-accent">Data Intelligence</span>
+              <span className="font-medium text-primary-foreground">Data Intelligence</span>
             </h1>
-            <p className="text-lg md:text-xl text-keja-primary/60 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-white/70 max-w-4xl mx-auto font-light leading-relaxed">
               From no-code AI implementation to demand forecasting and secure analytics dashboards - we help businesses leverage technology to reduce costs, prevent lost sales, and make data-driven decisions with confidence.
             </p>
           </div>
 
           <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Button
-              className="group bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold px-8 py-6 text-lg flex items-center gap-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg border-0"
-              onClick={() => window.location.href = '#contact'}
-            >
+              className="group glass-card border-keja-accent/20 hover:border-keja-accent/40 px-8 py-6 text-lg flex items-center gap-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 font-medium bg-destructive-foreground text-muted-foreground"
+              onClick={() => window.location.href = '#contact'}>
+
               Start Your AI Transformation
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             <Button
-              className="group glass-card bg-white/60 hover:bg-white/80 text-keja-primary font-semibold border-keja-primary/10 hover:border-keja-accent/40 px-8 py-6 text-lg flex items-center gap-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1"
-              onClick={() => window.location.href = '#services'}
-            >
+              className="group glass-card border-keja-accent/20 hover:border-keja-accent/40 px-8 py-6 text-lg flex items-center gap-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 font-medium bg-destructive-foreground text-muted-foreground"
+              onClick={() => window.location.href = '#services'}>
+
               Explore Our Solutions
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
