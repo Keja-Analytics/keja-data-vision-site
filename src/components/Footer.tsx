@@ -41,9 +41,6 @@ const Footer = () => {
               <a href="#services" className="hover:text-keja-accent transition-colors">
                 Services
               </a>
-              <a href="#team" className="hover:text-keja-accent transition-colors">
-                Team
-              </a>
               <a href="#clients" className="hover:text-keja-accent transition-colors">
                 Clients
               </a>
