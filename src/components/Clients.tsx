@@ -1,43 +1,47 @@
 
-import { Users } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Clients = () => {
   const clients = [
     { name: "TRIME ANIMAL FEEDS", logo: "T" },
     { name: "NEO-AGENCY ITALY", logo: "N" },
     { name: "ACRE INSIGHTS", logo: "A" },
-    { name: "ROBARE SAFARI", logo: "R" }
+    { name: "ROBARE SAFARI", logo: "R" },
+    // Duplicate for seamless loop
+    { name: "TRIME ANIMAL FEEDS", logo: "T" },
+    { name: "NEO-AGENCY ITALY", logo: "N" },
+    { name: "ACRE INSIGHTS", logo: "A" },
+    { name: "ROBARE SAFARI", logo: "R" },
   ];
 
   return (
-    <section id="clients" className="py-16 md:py-24">
-      <div className="section-container">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <Users className="h-5 w-5 text-keja-primary" />
-          <h2 className="section-title">Our Valued Clients</h2>
-        </div>
-        <p className="section-subtitle">
-          We're proud to partner with these organizations to deliver impactful data and AI solutions
+    <section id="clients" className="py-16 md:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <p className="text-center text-keja-primary/40 text-sm font-medium uppercase tracking-widest">
+          Trusted by leading organizations
         </p>
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+      <div className="relative">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f5f7fa] to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f5f7fa] to-transparent z-10"></div>
+
+        {/* Sliding track */}
+        <div className="flex animate-slide-clients gap-12 w-max">
           {clients.map((client, index) => (
-            <div 
-              key={index} 
-              className="glass-card p-6 flex flex-col items-center justify-center text-center aspect-square"
+            <div
+              key={index}
+              className="flex items-center gap-3 px-8 py-4 shrink-0"
             >
-              <div className="w-20 h-20 rounded-2xl bg-keja-accent/25 border border-keja-accent/30 flex items-center justify-center mb-4 text-keja-primary text-3xl font-bold">
+              <div className="w-10 h-10 rounded-xl bg-keja-accent/20 border border-keja-accent/30 flex items-center justify-center text-keja-primary font-bold text-lg">
                 {client.logo}
               </div>
-              <h3 className="text-lg font-semibold text-keja-primary">{client.name}</h3>
+              <span className="text-keja-primary/50 font-semibold text-lg whitespace-nowrap">
+                {client.name}
+              </span>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-keja-primary/50 max-w-3xl mx-auto">
-            We're proud to have partnered with these diverse organizations to deliver impactful data and AI solutions across various industries, helping them harness the power of their data to achieve business success.
-          </p>
         </div>
       </div>
     </section>
