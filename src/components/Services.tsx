@@ -49,7 +49,7 @@ const Services = () => {
     <section id="services" className="py-16 md:py-24">
       <div className="section-container">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <Briefcase className="h-5 w-5 text-keja-accent" />
+          <Briefcase className="h-5 w-5 text-keja-primary" />
           <h2 className="section-title">Our Services</h2>
         </div>
         <p className="section-subtitle">
@@ -62,15 +62,15 @@ const Services = () => {
             type="single" 
             value={activeCategory} 
             onValueChange={(value) => value && setActiveCategory(value as "data" | "ai")}
-            className="glass border-white/10 rounded-full p-1"
+            className="glass border-keja-primary/8 rounded-full p-1"
           >
             <ToggleGroupItem 
               value="data" 
               aria-label="Toggle data services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "data" 
-                  ? "bg-keja-accent/15 text-white shadow-md backdrop-blur-sm border border-keja-accent/20" 
-                  : "text-white/50 hover:text-white hover:bg-white/5"
+                  ? "bg-keja-accent text-keja-primary shadow-md border-0 font-semibold" 
+                  : "text-keja-primary/50 hover:text-keja-primary hover:bg-keja-accent/10"
               }`}
             >
               <Database className="h-4 w-4 mr-2" />
@@ -81,8 +81,8 @@ const Services = () => {
               aria-label="Toggle AI services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "ai" 
-                  ? "bg-keja-accent/15 text-white shadow-md backdrop-blur-sm border border-keja-accent/20" 
-                  : "text-white/50 hover:text-white hover:bg-white/5"
+                  ? "bg-keja-accent text-keja-primary shadow-md border-0 font-semibold" 
+                  : "text-keja-primary/50 hover:text-keja-primary hover:bg-keja-accent/10"
               }`}
             >
               <Brain className="h-4 w-4 mr-2" />
@@ -96,11 +96,11 @@ const Services = () => {
           {(activeCategory === "data" ? dataServices : aiServices).map((service, index) => (
             <Card 
               key={index} 
-              className="glass-card border-white/10 transition-all"
+              className="glass-card border-keja-primary/6 transition-all"
             >
               <CardContent className="p-6">
-                <h4 className="font-semibold text-white text-lg mb-2">{service.title}</h4>
-                <p className="text-white/50 font-light">{service.description}</p>
+                <h4 className="font-semibold text-keja-primary text-lg mb-2">{service.title}</h4>
+                <p className="text-keja-primary/55 font-light leading-relaxed">{service.description}</p>
               </CardContent>
             </Card>
           ))}
