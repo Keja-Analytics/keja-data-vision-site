@@ -63,15 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				keja: {
-					primary: '#1a2332', // Dark navy from logo background
-					secondary: '#243347', // Slightly lighter navy
-					accent: '#ff8c42', // Orange/copper from logo icon
-					light: '#f8f9fa', // Light cream
-					dark: '#0f1419', // Darkest navy
-					gray: '#6c757d', // Sophisticated gray
-					copper: '#e67e22', // Rich copper tone
-					cream: '#ffffff', // Pure white for contrast
+			keja: {
+					primary: '#0c192b', // Deep midnight blue background
+					secondary: '#132640', // Slightly lighter navy
+					accent: '#bfd8ee', // Soft ice blue for buttons
+					light: '#e8f0f8', // Light blue tint
+					dark: '#060d17', // Darkest navy
+					gray: '#8ba3bf', // Cool blue-gray
+					copper: '#a3c4e0', // Lighter accent complement
+					cream: '#ffffff', // Pure white for text
 				}
 			},
 			borderRadius: {

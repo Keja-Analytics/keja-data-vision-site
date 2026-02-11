@@ -62,15 +62,15 @@ const Services = () => {
             type="single" 
             value={activeCategory} 
             onValueChange={(value) => value && setActiveCategory(value as "data" | "ai")}
-            className="glass border-white/20 rounded-full p-1"
+            className="glass border-white/10 rounded-full p-1"
           >
             <ToggleGroupItem 
               value="data" 
               aria-label="Toggle data services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "data" 
-                  ? "bg-keja-accent/20 text-keja-primary shadow-md backdrop-blur-sm" 
-                  : "text-keja-gray hover:text-keja-primary hover:bg-white/10"
+                  ? "bg-keja-accent/15 text-white shadow-md backdrop-blur-sm border border-keja-accent/20" 
+                  : "text-white/50 hover:text-white hover:bg-white/5"
               }`}
             >
               <Database className="h-4 w-4 mr-2" />
@@ -81,8 +81,8 @@ const Services = () => {
               aria-label="Toggle AI services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "ai" 
-                  ? "bg-keja-accent/20 text-keja-primary shadow-md backdrop-blur-sm" 
-                  : "text-keja-gray hover:text-keja-primary hover:bg-white/10"
+                  ? "bg-keja-accent/15 text-white shadow-md backdrop-blur-sm border border-keja-accent/20" 
+                  : "text-white/50 hover:text-white hover:bg-white/5"
               }`}
             >
               <Brain className="h-4 w-4 mr-2" />
@@ -93,35 +93,17 @@ const Services = () => {
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 max-w-5xl mx-auto">
-          {activeCategory === "data" ? (
-            <>
-              {dataServices.map((service, index) => (
-                <Card 
-                  key={index} 
-                  className="glass-card border-white/20 hover:shadow-2xl transition-all hover:scale-105"
-                >
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-keja-primary text-lg mb-2">{service.title}</h4>
-                    <p className="text-keja-gray font-light">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </>
-          ) : (
-            <>
-              {aiServices.map((service, index) => (
-                <Card 
-                  key={index} 
-                  className="glass-card border-white/20 hover:shadow-2xl transition-all hover:scale-105"
-                >
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-keja-primary text-lg mb-2">{service.title}</h4>
-                    <p className="text-keja-gray font-light">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </>
-          )}
+          {(activeCategory === "data" ? dataServices : aiServices).map((service, index) => (
+            <Card 
+              key={index} 
+              className="glass-card border-white/10 transition-all"
+            >
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-white text-lg mb-2">{service.title}</h4>
+                <p className="text-white/50 font-light">{service.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

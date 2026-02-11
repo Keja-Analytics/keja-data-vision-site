@@ -45,7 +45,7 @@ const AboutUs = () => {
 
   return (
     <section id="about" className="py-20 md:py-32 relative" ref={sectionRef}>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-keja-light/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-keja-accent/3 to-transparent"></div>
       
       <div className="section-container relative">
         <div className="text-center mb-20">
@@ -60,25 +60,25 @@ const AboutUs = () => {
             <div 
               key={index}
               data-card-index={index}
-              className={`glass-card p-8 text-center hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 hover:scale-105 ${
+              className={`glass-card p-8 text-center transition-all duration-700 transform ${
                 visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-keja-accent/20 to-keja-copper/20 mb-6 transition-transform duration-300 hover:scale-110">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-keja-accent/10 border border-keja-accent/20 mb-6 transition-transform duration-300 hover:scale-110">
                 <solution.icon className="h-8 w-8 text-keja-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-keja-primary mb-4">{solution.title}</h3>
-              <p className="text-white leading-relaxed">{solution.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-4">{solution.title}</h3>
+              <p className="text-white/60 leading-relaxed">{solution.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="glass p-8 md:p-12 text-center hover:shadow-2xl transition-all duration-500">
-          <h3 className="text-2xl md:text-3xl font-bold text-keja-primary mb-6">
+        <div className="glass p-8 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
             Why Choose Keja Analytics?
           </h3>
-          <p className="text-lg text-white max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/60 max-w-4xl mx-auto leading-relaxed">
             We bridge the gap between complex AI technology and practical business solutions. Our approach focuses on reducing technical barriers, protecting your bottom line, and ensuring you maintain control over your sensitive data while achieving measurable ROI.
           </p>
         </div>
