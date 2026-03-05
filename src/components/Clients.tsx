@@ -2,14 +2,21 @@ import { Users } from "lucide-react";
 import acreInsightsLogo from "@/assets/acre-insights-logo.jpeg";
 import trimeAnimalFeedsLogo from "@/assets/trime-animal-feeds-logo.png";
 import robareSafarisLogo from "@/assets/robare-safaris-logo.gif";
+import robinLogo from "@/assets/robin-logo.jpeg";
+import utuLogo from "@/assets/utu-logo.png";
 
 const Clients = () => {
   const clients = [
     { name: "TRIME ANIMAL FEEDS", logo: trimeAnimalFeedsLogo },
     { name: "NEO-AGENCY ITALY", logo: null },
     { name: "ACRE INSIGHTS", logo: acreInsightsLogo },
-    { name: "ROBARE SAFARI", logo: robareSafarisLogo }
+    { name: "ROBARE SAFARI", logo: robareSafarisLogo },
+    { name: "ROBIN", logo: robinLogo },
+    { name: "UTU", logo: utuLogo },
   ];
+
+  // Duplicate for seamless loop
+  const allClients = [...clients, ...clients];
 
   return (
     <section id="clients" className="py-16 md:py-24">
@@ -22,22 +29,28 @@ const Clients = () => {
           We're proud to partner with these organizations to deliver impactful data and AI solutions
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-          {clients.map((client, index) => (
-            <div 
-              key={index} 
-              className="glass-card p-6 flex flex-col items-center justify-center text-center aspect-square"
-            >
-              <div className="w-20 h-20 rounded-2xl bg-white/80 border border-[#bfd8ee]/30 flex items-center justify-center mb-4 overflow-hidden">
-                {client.logo ? (
-                  <img src={client.logo} alt={client.name} className="w-16 h-16 object-contain" />
-                ) : (
-                  <span className="text-3xl font-bold text-[#0c192b]">{client.name.charAt(0)}</span>
-                )}
+        <div className="mt-12 overflow-hidden relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#f5f7fa] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#f5f7fa] to-transparent z-10 pointer-events-none" />
+
+          <div className="flex animate-marquee gap-8">
+            {allClients.map((client, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 flex flex-col items-center justify-center text-center min-w-[180px] h-[200px] shrink-0"
+              >
+                <div className="w-20 h-20 rounded-2xl bg-white/80 border border-[#bfd8ee]/30 flex items-center justify-center mb-4 overflow-hidden">
+                  {client.logo ? (
+                    <img src={client.logo} alt={client.name} className="w-16 h-16 object-contain" />
+                  ) : (
+                    <span className="text-3xl font-bold text-keja-primary">{client.name.charAt(0)}</span>
+                  )}
+                </div>
+                <h3 className="text-sm font-semibold text-keja-primary">{client.name}</h3>
               </div>
-              <h3 className="text-lg font-semibold text-keja-primary">{client.name}</h3>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 text-center">
