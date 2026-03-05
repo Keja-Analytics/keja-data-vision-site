@@ -1,12 +1,14 @@
-
 import { Users } from "lucide-react";
+import acreInsightsLogo from "@/assets/acre-insights-logo.jpeg";
+import trimeAnimalFeedsLogo from "@/assets/trime-animal-feeds-logo.png";
+import robareSafarisLogo from "@/assets/robare-safaris-logo.gif";
 
 const Clients = () => {
   const clients = [
-    { name: "TRIME ANIMAL FEEDS", logo: "T" },
-    { name: "NEO-AGENCY ITALY", logo: "N" },
-    { name: "ACRE INSIGHTS", logo: "A" },
-    { name: "ROBARE SAFARI", logo: "R" }
+    { name: "TRIME ANIMAL FEEDS", logo: trimeAnimalFeedsLogo },
+    { name: "NEO-AGENCY ITALY", logo: null },
+    { name: "ACRE INSIGHTS", logo: acreInsightsLogo },
+    { name: "ROBARE SAFARI", logo: robareSafarisLogo }
   ];
 
   return (
@@ -26,8 +28,12 @@ const Clients = () => {
               key={index} 
               className="glass-card p-6 flex flex-col items-center justify-center text-center aspect-square"
             >
-              <div className="w-20 h-20 rounded-2xl bg-keja-accent/25 border border-keja-accent/30 flex items-center justify-center mb-4 text-keja-primary text-3xl font-bold">
-                {client.logo}
+              <div className="w-20 h-20 rounded-2xl bg-white/80 border border-[#bfd8ee]/30 flex items-center justify-center mb-4 overflow-hidden">
+                {client.logo ? (
+                  <img src={client.logo} alt={client.name} className="w-16 h-16 object-contain" />
+                ) : (
+                  <span className="text-3xl font-bold text-[#0c192b]">{client.name.charAt(0)}</span>
+                )}
               </div>
               <h3 className="text-lg font-semibold text-keja-primary">{client.name}</h3>
             </div>
