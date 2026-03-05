@@ -8,48 +8,24 @@ const Services = () => {
   const [activeCategory, setActiveCategory] = useState<"data" | "ai">("data");
 
   const dataServices = [
-    {
-      title: "Data Analysis",
-      description: "Transforming raw data into understandable insights to drive informed decision-making."
-    },
-    {
-      title: "Data Engineering",
-      description: "Building robust data pipelines and infrastructure to ensure efficient data processing and storage."
-    },
-    {
-      title: "Data Strategy",
-      description: "Developing comprehensive data roadmaps for business growth aligned with your strategic objectives."
-    },
-    {
-      title: "Market Analysis & Forecasting",
-      description: "Predicting trends and understanding market dynamics to help you stay ahead of competition."
-    }
+    { title: "Data Analysis", description: "Transforming raw data into understandable insights to drive informed decision-making." },
+    { title: "Data Engineering", description: "Building robust data pipelines and infrastructure to ensure efficient data processing and storage." },
+    { title: "Data Strategy", description: "Developing comprehensive data roadmaps for business growth aligned with your strategic objectives." },
+    { title: "Market Analysis & Forecasting", description: "Predicting trends and understanding market dynamics to help you stay ahead of competition." }
   ];
 
   const aiServices = [
-    {
-      title: "AI R&D Projects",
-      description: "Pioneering research and development in artificial intelligence to solve complex business challenges."
-    },
-    {
-      title: "Machine Learning",
-      description: "Developing predictive models and automated systems that improve with experience."
-    },
-    {
-      title: "LLM & AI Agent Projects",
-      description: "Crafting advanced natural language and intelligent agent solutions tailored to your specific needs."
-    },
-    {
-      title: "AI Implementation",
-      description: "Seamlessly integrating AI solutions into your existing business processes and systems."
-    }
+    { title: "AI R&D Projects", description: "Pioneering research and development in artificial intelligence to solve complex business challenges." },
+    { title: "Machine Learning", description: "Developing predictive models and automated systems that improve with experience." },
+    { title: "LLM & AI Agent Projects", description: "Crafting advanced natural language and intelligent agent solutions tailored to your specific needs." },
+    { title: "AI Implementation", description: "Seamlessly integrating AI solutions into your existing business processes and systems." }
   ];
 
   return (
     <section id="services" className="py-16 md:py-24">
       <div className="section-container">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <Briefcase className="h-5 w-5 text-keja-primary" />
+          <Briefcase className="h-5 w-5 text-keja-copper" />
           <h2 className="section-title">Our Services</h2>
         </div>
         <p className="section-subtitle">
@@ -62,15 +38,15 @@ const Services = () => {
             type="single" 
             value={activeCategory} 
             onValueChange={(value) => value && setActiveCategory(value as "data" | "ai")}
-            className="glass border-keja-primary/8 rounded-full p-1"
+            className="glass border-keja-border rounded-full p-1"
           >
             <ToggleGroupItem 
               value="data" 
               aria-label="Toggle data services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "data" 
-                  ? "bg-keja-accent text-keja-primary shadow-md border-0 font-semibold" 
-                  : "text-keja-primary/50 hover:text-keja-primary hover:bg-keja-accent/10"
+                  ? "bg-gradient-to-r from-keja-copper to-keja-cyan text-keja-background shadow-md border-0 font-semibold" 
+                  : "text-keja-muted hover:text-foreground"
               }`}
             >
               <Database className="h-4 w-4 mr-2" />
@@ -81,8 +57,8 @@ const Services = () => {
               aria-label="Toggle AI services" 
               className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
                 activeCategory === "ai" 
-                  ? "bg-keja-accent text-keja-primary shadow-md border-0 font-semibold" 
-                  : "text-keja-primary/50 hover:text-keja-primary hover:bg-keja-accent/10"
+                  ? "bg-gradient-to-r from-keja-copper to-keja-cyan text-keja-background shadow-md border-0 font-semibold" 
+                  : "text-keja-muted hover:text-foreground"
               }`}
             >
               <Brain className="h-4 w-4 mr-2" />
@@ -96,11 +72,11 @@ const Services = () => {
           {(activeCategory === "data" ? dataServices : aiServices).map((service, index) => (
             <Card 
               key={index} 
-              className="glass-card border-keja-primary/6 transition-all"
+              className="glass-card border-keja-cyan/15 transition-all"
             >
               <CardContent className="p-6">
-                <h4 className="font-semibold text-keja-primary text-lg mb-2">{service.title}</h4>
-                <p className="text-keja-primary/55 font-light leading-relaxed">{service.description}</p>
+                <h4 className="font-semibold text-foreground text-lg mb-2">{service.title}</h4>
+                <p className="text-keja-muted font-light leading-relaxed">{service.description}</p>
               </CardContent>
             </Card>
           ))}
