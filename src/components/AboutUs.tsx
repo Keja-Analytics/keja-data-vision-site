@@ -45,6 +45,8 @@ const AboutUs = () => {
 
   return (
     <section id="about" className="py-20 md:py-32 relative" ref={sectionRef}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-keja-accent/5 to-transparent"></div>
+      
       <div className="section-container relative">
         <div className="text-center mb-20">
           <h2 className="section-title animate-fade-in">Solving Real Business Challenges</h2>
@@ -63,20 +65,20 @@ const AboutUs = () => {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-keja-copper/15 border border-keja-copper/25 mb-6 transition-transform duration-300 hover:scale-110">
-                <solution.icon className="h-8 w-8 text-keja-copper" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-keja-accent/20 border border-keja-accent/30 mb-6 transition-transform duration-300 hover:scale-110">
+                <solution.icon className="h-8 w-8 text-keja-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">{solution.title}</h3>
-              <p className="text-keja-muted leading-relaxed">{solution.description}</p>
+              <h3 className="text-xl font-semibold text-keja-primary mb-4">{solution.title}</h3>
+              <p className="text-keja-primary/60 leading-relaxed">{solution.description}</p>
             </div>
           ))}
         </div>
 
         <div className="glass p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold text-keja-primary mb-6">
             Why Choose Keja Analytics?
           </h3>
-          <p className="text-lg text-keja-muted max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-keja-primary/60 max-w-4xl mx-auto leading-relaxed">
             We bridge the gap between complex AI technology and practical business solutions. Our approach focuses on reducing technical barriers, protecting your bottom line, and ensuring you maintain control over your sensitive data while achieving measurable ROI.
           </p>
         </div>

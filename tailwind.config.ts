@@ -64,13 +64,14 @@ export default {
     				ring: 'hsl(var(--sidebar-ring))'
     			},
     			keja: {
-    				background: '#0B0F19',
-    				surface: '#161B28',
-    				text: '#F5F7FA',
-    				muted: '#94A3B8',
-    				copper: '#C58E71',
-    				cyan: '#48CFCB',
-    				border: '#1E2536'
+    				primary: '#0c192b',
+    				secondary: '#132640',
+    				accent: '#bfd8ee',
+    				light: '#e8f0f8',
+    				dark: '#060d17',
+    				gray: '#8ba3bf',
+    				copper: '#a3c4e0',
+    				cream: '#ffffff'
     			}
     		},
     		borderRadius: {
@@ -80,28 +81,58 @@ export default {
     		},
     		keyframes: {
     			'accordion-down': {
-    				from: { height: '0' },
-    				to: { height: 'var(--radix-accordion-content-height)' }
+    				from: {
+    					height: '0'
+    				},
+    				to: {
+    					height: 'var(--radix-accordion-content-height)'
+    				}
     			},
     			'accordion-up': {
-    				from: { height: 'var(--radix-accordion-content-height)' },
-    				to: { height: '0' }
+    				from: {
+    					height: 'var(--radix-accordion-content-height)'
+    				},
+    				to: {
+    					height: '0'
+    				}
     			},
     			'fade-in': {
-    				'0%': { opacity: '0', transform: 'translateY(10px)' },
-    				'100%': { opacity: '1', transform: 'translateY(0)' }
+    				'0%': {
+    					opacity: '0',
+    					transform: 'translateY(10px)'
+    				},
+    				'100%': {
+    					opacity: '1',
+    					transform: 'translateY(0)'
+    				}
     			},
     			float: {
-    				'0%, 100%': { transform: 'translateY(0px)' },
-    				'50%': { transform: 'translateY(-10px)' }
+    				'0%, 100%': {
+    					transform: 'translateY(0px)'
+    				},
+    				'50%': {
+    					transform: 'translateY(-10px)'
+    				}
     			},
     			'slide-up': {
-    				'0%': { opacity: '0', transform: 'translateY(30px)' },
-    				'100%': { opacity: '1', transform: 'translateY(0)' }
+    				'0%': {
+    					opacity: '0',
+    					transform: 'translateY(30px)'
+    				},
+    				'100%': {
+    					opacity: '1',
+    					transform: 'translateY(0)'
+    				}
     			},
     			'scale-in': {
-    				'0%': { opacity: '0', transform: 'scale(0.95)' },
-    				'100%': { opacity: '1', transform: 'scale(1)' }
+    				'0%': {
+    					opacity: '0',
+    					transform: 'scale(0.95)'
+    				},
+    				'100%': {
+    					opacity: '1',
+    					transform: 'scale(1)'
+    				}
     			}
     		},
     		animation: {
@@ -113,9 +144,34 @@ export default {
     			'scale-in': 'scale-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
     		},
     		fontFamily: {
-    			sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-    			serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-    			mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+    			sans: [
+    				'Inter',
+    				'ui-sans-serif',
+    				'system-ui',
+    				'sans-serif',
+    				'Apple Color Emoji',
+    				'Segoe UI Emoji',
+    				'Segoe UI Symbol',
+    				'Noto Color Emoji'
+    			],
+    			serif: [
+    				'ui-serif',
+    				'Georgia',
+    				'Cambria',
+    				'Times New Roman',
+    				'Times',
+    				'serif'
+    			],
+    			mono: [
+    				'ui-monospace',
+    				'SFMono-Regular',
+    				'Menlo',
+    				'Monaco',
+    				'Consolas',
+    				'Liberation Mono',
+    				'Courier New',
+    				'monospace'
+    			]
     		},
     		backdropBlur: {
     			xs: '2px'
