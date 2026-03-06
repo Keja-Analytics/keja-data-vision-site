@@ -31,8 +31,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-keja-accent/5 to-transparent"></div>
-      
       <div className="section-container relative">
         <div className="flex items-center justify-center gap-2 mb-2">
           <Mail className="h-5 w-5 text-keja-primary" />
@@ -49,7 +47,7 @@ const Contact = () => {
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-keja-primary/60 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-keja-secondary mb-1">
                   Name
                 </label>
                 <Input
@@ -58,13 +56,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="w-full bg-white/50 border-keja-primary/10 text-keja-primary placeholder:text-keja-primary/30 focus:border-keja-accent"
+                  className="w-full bg-white border-0 border-b-2 border-keja-gray rounded-none text-keja-primary placeholder:text-keja-secondary/50 focus:border-keja-accent focus-visible:ring-0 focus-visible:ring-offset-0"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-keja-primary/60 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-keja-secondary mb-1">
                   Email
                 </label>
                 <Input
@@ -74,13 +72,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your.email@example.com"
-                  className="w-full bg-white/50 border-keja-primary/10 text-keja-primary placeholder:text-keja-primary/30 focus:border-keja-accent"
+                  className="w-full bg-white border-0 border-b-2 border-keja-gray rounded-none text-keja-primary placeholder:text-keja-secondary/50 focus:border-keja-accent focus-visible:ring-0 focus-visible:ring-offset-0"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-keja-primary/60 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-keja-secondary mb-1">
                   Message
                 </label>
                 <Textarea
@@ -89,14 +87,14 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="How can we help you?"
-                  className="w-full min-h-[150px] bg-white/50 border-keja-primary/10 text-keja-primary placeholder:text-keja-primary/30 focus:border-keja-accent"
+                  className="w-full min-h-[150px] bg-white border-0 border-b-2 border-keja-gray rounded-none text-keja-primary placeholder:text-keja-secondary/50 focus:border-keja-accent focus-visible:ring-0 focus-visible:ring-offset-0"
                   required
                 />
               </div>
               
               <Button 
                 type="submit" 
-                className="w-full bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold border-0 transition-all duration-300 hover:scale-[1.02] shadow-md"
+                className="w-full bg-keja-accent hover:bg-keja-accent/80 text-white font-semibold border-0 transition-all duration-300 hover:scale-[1.02] shadow-md"
               >
                 Send Message
               </Button>
@@ -110,16 +108,16 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="h-10 w-10 rounded-xl bg-keja-accent/25 border border-keja-accent/30 flex items-center justify-center mr-4">
-                    <Linkedin className="h-5 w-5 text-keja-primary" />
+                  <div className="h-10 w-10 rounded-xl bg-keja-accent/10 border border-keja-accent/20 flex items-center justify-center mr-4">
+                    <Linkedin className="h-5 w-5 text-keja-accent" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-keja-primary/70">LinkedIn</h4>
+                    <h4 className="font-medium text-keja-primary">LinkedIn</h4>
                     <a 
                       href="https://www.linkedin.com/company/keja-analytics" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-keja-primary/50 hover:text-keja-accent transition-colors duration-300"
+                      className="text-keja-secondary hover:text-keja-accent transition-colors duration-300"
                     >
                       linkedin.com/company/keja-analytics
                     </a>
@@ -127,12 +125,12 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="h-10 w-10 rounded-xl bg-keja-accent/25 border border-keja-accent/30 flex items-center justify-center mr-4">
-                    <Mail className="h-5 w-5 text-keja-primary" />
+                  <div className="h-10 w-10 rounded-xl bg-keja-accent/10 border border-keja-accent/20 flex items-center justify-center mr-4">
+                    <Mail className="h-5 w-5 text-keja-accent" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-keja-primary/70">Email</h4>
-                    <p className="text-keja-primary/50">kejaanalytics@gmail.com</p>
+                    <h4 className="font-medium text-keja-primary">Email</h4>
+                    <p className="text-keja-secondary">kejaanalytics@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -140,11 +138,11 @@ const Contact = () => {
             
             <div className="glass p-8">
               <h3 className="text-xl font-bold text-keja-primary mb-4">Ready to transform your data?</h3>
-              <p className="text-keja-primary/50 mb-6">
+              <p className="text-keja-secondary mb-6">
                 Let's work together to unlock the full potential of your data and help your business thrive with AI-powered solutions.
               </p>
               <Button 
-                className="bg-keja-accent hover:bg-keja-accent/80 text-keja-primary font-semibold border-0 transition-all duration-300 hover:scale-105 shadow-md"
+                className="bg-keja-accent hover:bg-keja-accent/80 text-white font-semibold border-0 transition-all duration-300 hover:scale-105 shadow-md"
                 onClick={() => {
                   const formElement = document.querySelector('form');
                   if (formElement) {

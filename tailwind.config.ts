@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,14 +63,14 @@ export default {
     				ring: 'hsl(var(--sidebar-ring))'
     			},
     			keja: {
-    				primary: '#0c192b',
-    				secondary: '#132640',
-    				accent: '#bfd8ee',
-    				light: '#e8f0f8',
-    				dark: '#060d17',
-    				gray: '#8ba3bf',
-    				copper: '#a3c4e0',
-    				cream: '#ffffff'
+    				primary: '#1A2B47',
+    				secondary: '#64748B',
+    				accent: '#48CFCB',
+    				copper: '#C58E71',
+    				light: '#F0F7FF',
+    				dark: '#0F1B2D',
+    				gray: '#E2E8F0',
+    				cream: '#FFFFFF'
     			}
     		},
     		borderRadius: {

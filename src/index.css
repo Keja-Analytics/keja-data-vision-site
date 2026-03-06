@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 210 20% 96%;
-    --foreground: 210 40% 11%;
+    --background: 0 0% 100%;
+    --foreground: 216 44% 19%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 11%;
+    --card-foreground: 216 44% 19%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 11%;
+    --popover-foreground: 216 44% 19%;
 
-    --primary: 210 50% 84%;
-    --primary-foreground: 210 40% 11%;
+    --primary: 175 52% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 92%;
-    --secondary-foreground: 210 40% 11%;
+    --secondary: 210 100% 97%;
+    --secondary-foreground: 216 44% 19%;
 
-    --muted: 210 20% 92%;
-    --muted-foreground: 210 10% 40%;
+    --muted: 210 100% 97%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 50% 84%;
-    --accent-foreground: 210 40% 11%;
+    --accent: 20 40% 61%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 210 50% 84%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 175 52% 55%;
 
     --radius: 0.75rem;
 
@@ -55,9 +55,6 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: linear-gradient(160deg, #f5f7fa 0%, #eef2f7 40%, #f0f4f8 70%, #f5f7fa 100%);
-    background-attachment: fixed;
-    background-size: cover;
     min-height: 100vh;
   }
 
@@ -76,11 +73,7 @@
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl font-medium text-keja-primary/60 mb-12 text-center max-w-3xl mx-auto;
-  }
-
-  .gradient-bg {
-    @apply bg-gradient-to-br from-keja-accent via-keja-light to-white;
+    @apply text-xl md:text-2xl font-medium text-keja-secondary mb-12 text-center max-w-3xl mx-auto;
   }
 
   .tech-pattern {
@@ -94,7 +87,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(12, 25, 43, 0.03) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(26, 43, 71, 0.03) 1px, transparent 0);
     background-size: 40px 40px;
     opacity: 0.5;
     z-index: -1;
@@ -102,41 +95,26 @@
 
   .glass {
     @apply backdrop-blur-2xl border shadow-2xl;
-    border-color: rgba(12, 25, 43, 0.08);
+    border-color: rgba(226, 232, 240, 1);
     border-radius: 24px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(191,216,238,0.15) 50%, rgba(255,255,255,0.7) 100%);
-    box-shadow: 
-      0 8px 32px rgba(12, 25, 43, 0.06),
-      inset 0 1px 0 rgba(255, 255, 255, 0.8),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   }
 
   .glass-card {
-    @apply backdrop-blur-xl border shadow-lg;
-    border-color: rgba(12, 25, 43, 0.06);
+    @apply border shadow-sm;
+    border-color: rgba(226, 232, 240, 1);
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(191,216,238,0.1) 50%, rgba(255,255,255,0.65) 100%);
-    box-shadow: 
-      0 4px 24px rgba(12, 25, 43, 0.05),
-      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .glass-card:hover {
-    @apply shadow-2xl;
-    transform: translateY(-6px) scale(1.01);
-    border-color: rgba(191, 216, 238, 0.5);
-    background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(191,216,238,0.18) 50%, rgba(255,255,255,0.8) 100%);
-    box-shadow: 
-      0 12px 40px rgba(12, 25, 43, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.9),
-      0 0 60px rgba(191, 216, 238, 0.12);
-  }
-
-  .glass-dark {
-    @apply bg-white/50 backdrop-blur-xl border shadow-2xl;
-    border-color: rgba(12, 25, 43, 0.08);
-    border-radius: 20px;
+    @apply shadow-lg;
+    transform: translateY(-4px);
+    border-color: rgba(72, 207, 203, 0.3);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -157,8 +135,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(191, 216, 238, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(191, 216, 238, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(72, 207, 203, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(72, 207, 203, 0.5); }
 }
 
 .animate-float {
@@ -190,7 +168,7 @@
 
 .btn-hover:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 10px 40px rgba(12, 25, 43, 0.08);
+  box-shadow: 0 10px 40px rgba(26, 43, 71, 0.08);
 }
 
 .fade-up {
