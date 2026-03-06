@@ -17,7 +17,9 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-20 md:py-32 bg-keja-light relative overflow-hidden">
+    <section id="team" className="py-20 md:py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-keja-accent/5 to-transparent"></div>
+      
       <div className="section-container relative">
         <div className="flex items-center justify-center gap-2 mb-2">
           <Users className="h-5 w-5 text-keja-primary" />
@@ -31,10 +33,10 @@ const Team = () => {
           {founders.map((founder, index) => (
             <div 
               key={index} 
-              className="glass-card overflow-hidden bg-white"
+              className="glass-card overflow-hidden"
             >
-              <div className="aspect-[3/2] bg-keja-light relative border-b border-keja-secondary/20">
-                <div className="absolute inset-0 flex items-center justify-center text-keja-secondary/30">
+              <div className="aspect-[3/2] bg-gradient-to-br from-keja-accent/20 to-keja-accent/5 relative border-b border-keja-primary/6">
+                <div className="absolute inset-0 flex items-center justify-center text-keja-primary/20">
                   <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
@@ -44,15 +46,15 @@ const Team = () => {
               
               <div className="p-6">
                 <h3 className="text-xl font-bold text-keja-primary">{founder.name}</h3>
-                <p className="text-keja-copper font-semibold">{founder.role}</p>
-                <p className="text-keja-secondary mt-4">{founder.bio}</p>
+                <p className="text-keja-accent font-semibold">{founder.role}</p>
+                <p className="text-keja-primary/55 mt-4">{founder.bio}</p>
                 
                 <div className="mt-6">
                   <a 
                     href={founder.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center text-keja-secondary hover:text-keja-accent transition-colors"
+                    className="flex items-center text-keja-primary/50 hover:text-keja-accent transition-colors"
                   >
                     <Linkedin className="h-5 w-5 mr-2" />
                     Connect on LinkedIn
